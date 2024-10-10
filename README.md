@@ -66,3 +66,25 @@ Sometimes an agent can upset you. To wipe it out completely,
 ./delete_agent <your_agent_name> 
 ```
 
+## For the Bonus Question, I implemented a Weather Information agent.
+This weather information tool is using the OpenWeatherMap API to provide real-time weather data as requested by the user.
+
+This gives real-time weather updates for any city in the world. The user query gets the latest weather information from OpenWeatherMap, ensuring that the data is always up-to-date.
+
+This is based on the `scholar` agent we have created in the pool. As before, we simply clone it:
+```
+./clone_agent scholar get_weather
+```
+
+Once the weather_agent is cloned, make sure to make these changes in the agent.yaml file:
+- model_name: gpt-4o-mini
+
+In Plugins add the following:
+- name: get_weather
+
+In target_tasks add the following:
+- get weather
+
+You can now run this agent via:
+- python assemble.py get_weather
+

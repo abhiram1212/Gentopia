@@ -9,3 +9,9 @@ from .vanilla_template import *
 from .openai_memory_template import *
 from .vanilla-ziyu import *
 from .scholar-ziyu import *
+from .VanillaAgent import *
+from .read_pdf import *
+from .alpha import *
+from .google_search.py import *
+from .google_search import *
+from .get_weather import *
