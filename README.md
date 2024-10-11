@@ -66,25 +66,27 @@ Sometimes an agent can upset you. To wipe it out completely,
 ./delete_agent <your_agent_name> 
 ```
 
-## For the Bonus Question, I implemented a Weather Information agent.
-This weather information tool is using the OpenWeatherMap API to provide real-time weather data as requested by the user.
+## For the Bonus Question, I implemented a Phone number Verfication agent.
+This phone number verification tool uses the NumVerify API to validate phone numbers in real-time.
 
-This gives real-time weather updates for any city in the world. The user query gets the latest weather information from OpenWeatherMap, ensuring that the data is always up-to-date.
+It provides detailed information such as the phone number's validity, location, carrier, and line type.
+
+The user query retrieves accurate and up-to-date information for phone numbers from anywhere in the world, ensuring reliable verification. 
 
 This is based on the `scholar` agent we have created in the pool. As before, we simply clone it:
 ```
-./clone_agent scholar get_weather
+./clone_agent scholar num_verify_agentr
 ```
 
-Once the weather_agent is cloned, make sure to make these changes in the agent.yaml file:
-- model_name: gpt-4o-mini
+Once the num_verify_agent is cloned, make sure to make these changes in the agent.yaml file:
+- -model_name: gpt-4o-mini
 
 In Plugins add the following:
-- name: get_weather
+- -name: number_verif
 
 In target_tasks add the following:
-- get weather
+- -number verify
 
 You can now run this agent via:
-- python assemble.py get_weather
+- -python assemble.py num_verify_agent
 

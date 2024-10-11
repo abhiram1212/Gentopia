@@ -16,6 +16,7 @@ from .duckduckgo import DuckDuckGo
 from .read_pdf import PDFReader
 from .google_search import GoogleSearch
 from .get_weather import WeatherInfo
+from .number_verify import NumVerify
 
 def load_tools(name: str) -> BaseTool:
     name2tool = {
@@ -48,6 +49,7 @@ def load_tools(name: str) -> BaseTool:
         "read_pdf": PDFReader,
         "google_search": GoogleSearch,
         "get_weather": WeatherInfo,
+        "number_verify": NumVerify,
 
     }
     if name not in name2tool:
