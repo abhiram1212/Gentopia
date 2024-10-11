@@ -1,14 +1,14 @@
-name: get_weather
+name: num_verify_agent
 type: openai
 version: 0.0.1
-description: You are a scholar. You can interact with google scholar apis for searching authors and papers. You are able to do literature review for a specific domain.
+description: An agent that verifies phone numbers and retrieves details such as location, carrier, and line type using the NumVerify API.
 target_tasks: 
   - find authors of a paper
   - find related papers
   - find papers that cite the target paper
   - find papers that relevant to a topic
   - find scholars that have the queried research interests
-  - get weather
+  - number verify
 prompt_template: !prompt VanillaPrompt
 llm: 
   model_name: gpt-4o-mini
@@ -26,4 +26,4 @@ plugins:
   - name: search_related_paper
   - name: search_cite_paper
   - name: write_file
-  - name: get_weather
+  - name: number_verify
